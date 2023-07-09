@@ -44,6 +44,12 @@
 	nav {
 		height: auto;
 	}
+	.nav-flex a i {
+		display: none;
+	}
+	.nav-flex a:hover {
+		display: none;
+	}
 
 	.logo {
 		margin-left: auto;
