@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Raleway", sans-serif;
+}
+nav {
+	grid-area: nav;
+}
+.navbar {
+	display: flex;
+}
+ul.navbar {
+	list-style-type: none;
+	margin: 0;
+	padding: 5px;
+	overflow: hidden;
+	background-color: #000000;
+}
+.grid-content {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-areas:
+		"nav"
+		"main"
+		"footer";
+}
+ul.navbar li {
+	float: left;
+	margin-right: 10px;
+}
+ul.navbar img {
+	width: 50px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.navbar h1 {
+	color: white;
+	text-align: start;
+	margin-right: auto;
+	padding-top: 10px;
+	font-weight: 700;
+}
+ul.navbar li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 10px;
+	text-decoration: none;
+	transition: background-color 0.5s;
+}
+
+ul.navbar li a:hover {
+	background-color: #545454;
+}
+
+.nav-flex {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.show {
+	width: 50%;
+	height: 180px;
+	background-color: rgb(0, 0, 0);
+	transform: translateX(100%);
+	transition: transform 0.3s ease;
+	position: absolute;
+	opacity: 0.9;
+	right: 0;
+	top: 50px;
+	bottom: 0;
+}
+.large {
+	display: none;
+}
+.desc {
+	display: none;
+	color: white;
+	align-items: start;
+	padding: 20px;
+	padding-top: 5px;
+}
+
+.desc p {
+	font-size: 1rem;
+	text-shadow: 2px 2px 4px rgba(174, 156, 106, 0.5);
+	border: 1px solid #ffffff; /* Agrega un borde de 1 píxel de grosor en color negro */
+	padding: 10px;
+}
+.navbar #menu-trigger:hover + .show {
+	transform: translateX(0%);
+}
+.show ul {
+	list-style-type: none;
+	margin: 5px;
+	padding: 5px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.show ul li a {
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	padding: 15px;
+}
+main {
+	display: grid;
+	grid-area: main;
+	grid-template-columns: auto;
+	justify-content: center;
+	width: 100%;
+	background-image: url(../img/collection-of-ice-cream-cartoon-vector.jpg);
+
+	background-size: contain;
+	gap: 10px;
+	box-sizing: border-box;
+	padding: 5px;
+}
+
+.card {
+	width: 250px;
+	height: auto;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	overflow: hidden;
+	background-color: #000000;
+	box-shadow: 0 2px 4px rgba(189, 187, 187, 0.1);
+	transition: 0.1s;
+}
+
+.cardimg {
+	height: 200px;
+	overflow: hidden;
+}
+.card img {
+	width: 250px;
+	height: 200px;
+	object-fit: cover;
+	transition: 0.2s;
+}
+.card-disp:hover {
+	transform: scale(1.3);
+	cursor: pointer;
+}
+.card-details {
+	padding: 16px;
+}
+
+.card-details h3 {
+	font-size: 18px;
+	color: #ccc;
+	text-align: center;
+}
+.card-details p {
+	color: wheat;
+	text-align: center;
+	font-size: 10px;
+}
+
+.card-details .price {
+	font-size: 16px;
+	font-weight: bold;
+	color: #ccc;
+	text-align: center;
+	background-image: url(../img/phone-svgrepo-com.svg);
+}
+
+.price-button {
+	display: block;
+	width: 100%;
+	margin-top: 10px;
+	padding: 8px 16px;
+	background-color: #333;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	font-size: 14px;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.price-button:hover {
+	background-color: #3c3737;
+}
+
+.price {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.price img {
+	margin-left: 5px;
+	width: 20px;
+	height: 40px;
+}
+footer {
+	grid-area: footer;
+	width: 100%;
+	background-color: #000000;
+	height: 50px;
+	color: white;
+}
+footer h4 {
+	text-align: center;
+	padding-top: 15px;
+}
+footer a {
+	color: #ccc;
+	text-decoration: none;
+	font-size: 20px;
+	margin-left: 5;
+}
+footer a:hover {
+	color: bisque;
+}
+.logo {
+	display: flex;
+	margin-right: auto;
+}
+.show {
+	transition: transform 0.3s ease-in-out;
+	transform: translateX(100%);
+}
+
+.show.active {
+	transform: translateX(0);
+}
