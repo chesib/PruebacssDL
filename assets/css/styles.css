@@ -235,6 +235,7 @@ footer a:hover {
 .wiggle-button:hover {
 	position: relative;
 	animation: wiggle 0.3s alternate;
+	background-color: #304733;
 }
 
 @keyframes wiggle {
